@@ -1,0 +1,56 @@
+<%- include('header') -%>
+
+<div class="contact">
+    <div class="inner">
+        <form action="/makeReq" method="post" id="makeRequest">
+            <!-- <h3>Ако не можете на намерите калъф за вашия телефон, може да изпратите заявка, която ние ще обработим и ще върнем отговор</h3> -->
+            <h4>Ако знаете модела на телефона го въведете тук и пропоснете следващите 3 полета</h4>
+            <label for="phoneModule" class="form-group">
+                <input name="phoneModule" class="form-control" required>
+                <span>марка и модел на телефон</span>
+            </label>
+            <h4>въдетете своите размери на телефон</h4>
+            <label for="height" class="form-group">
+                <input name="height" type="text" class="form-control" required>
+                <span>височина (мм)</span>
+            </label>
+            <label for="width" class="form-group">
+                <input name="width" class="form-control" required>
+                <span>ширина (мм)</span>
+            </label>
+            <label for="thickness" class="form-group">
+                <input name="thickness" class="form-control" required>
+                <span>дебелина (мм)</span>
+            </label>
+            <label for="color" class="form-group">изберете цвят
+            <select name="color">  
+                <option value = "Прозрачен"> Прозрачен </option>  
+                <option value = "Бял"> Бял </option>
+                <option value = "Червен"> Червен </option> 
+                <option value = "Сив"> Сив </option>
+                <option value = "Кафяв"> Кафяв </option>
+                <option value = "Жълт"> Жълт </option> 
+                <option value = "Син"> Син </option> 
+                <option value = "Черен"> Черен </option>  
+            </select></label>
+
+            <label for="email" class="form-group">
+                <input name="email" class="form-control" required>
+                <span>email</span>
+            </label>
+
+            <label for="moreInfo" class="form-group"> 
+                <textarea name="moreInfo" id="moreInfo" class="form-control" required></textarea>
+                <span>Добавете информация която смятате за полезна:</span>
+            </label>
+
+        <input type="submit" value="Изпрати">
+
+    </form>
+
+
+        <h4>Благодарим за използването на нашата платформа. Надяваме се да сме ви били полезни.</h4>
+    </div>
+</div>
+
+<%- include('footer') -%>

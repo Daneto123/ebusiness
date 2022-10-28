@@ -1,0 +1,48 @@
+<%- include('header') -%>
+
+
+<div class="center">
+    <div class="menu">
+        <div class="search">
+            <input id="searchItem" placeholder="Търси">  
+        </div>
+
+        <h3>ако не знаете модела на телефона цъкнете <button onclick="openMain('main', 'menu')">тук</button></h3>
+    
+        <div class="listPhones">
+
+        </div>
+    
+    </div>
+
+    <div class="main">
+
+        <h4>въдетете своите размери на телефон</h4>
+        <a>височина (мм)</a><br>
+        <input type="text" id="height"><br>
+        <a>ширина (мм)</a><br>
+        <input type="text" id="width"><br>
+        <a>дебелина (мм)</a><br>
+        <input type="text" id="thickness"><br>
+
+        <button onclick="search()">Търси</button>
+
+        <ul>
+
+        </ul>
+    </div>
+
+    <div class="phoneInfo">
+            
+    </div>
+
+    <div class="buyItem">
+
+    </div>
+  </div>
+
+
+<script type='text/javascript' src="../functionality/predictiveSearch.js"></script>    
+<script type='text/javascript' src="../functionality/loadPhones.js"></script> 
+
+<%- include('footer') -%>

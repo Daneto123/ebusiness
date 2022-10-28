@@ -1,0 +1,54 @@
+<%- include('header') -%>
+
+<div class="addProduct">
+    <a>Ако сте фирма и предлагате калъфи за телефон може да добавите своите продукти тук.</a><br><br>
+    <form action="/addPhones" method="post">
+        <label for="CompanyName" class="form-group">
+            <input name="CompanyName" class="form-control" required>
+            <span>Име на фирма</span>
+        </label>
+        <label for="PhoneModel" class="form-group">
+            <input name="PhoneModel" class="form-control" required>
+            <span>модел на телефон</span>
+        </label>
+        <label for="Height" class="form-group">
+            <input name="Height" class="form-control" required>
+            <span>височина (мм)</span>
+        </label>
+        <label for="Width" class="form-group">
+            <input name="Width" class="form-control" required>
+            <span>ширина (мм)</span>
+        </label>
+        <label for="Thickness" class="form-group">
+            <input name="Thickness" class="form-control" required>
+            <span>дебелина (мм)</span>
+        </label>
+        <label for="Color" class="form-group">
+            <span>изберете цвят</span>
+            <select id="Color" name="Color">  
+                <option value = "Прозрачен"> Прозрачен </option>  
+                <option value = "Бял"> Бял </option>
+                <option value = "Червен"> Червен </option> 
+                <option value = "Сив"> Сив </option>
+                <option value = "Кафяв"> Кафяв </option>
+                <option value = "Жълт"> Жълт </option> 
+                <option value = "Син"> Син </option> 
+                <option value = "Черен"> Черен </option>  
+            </select>
+            <span>изберете цвят</span>
+        </label>
+        <label for="Availability" class="form-group">
+            <input name="Availability" class="form-control" required>
+            <span>брой</span>
+        </label>
+        <label for="Price" class="form-group">
+            <input name="Price" class="form-control" required>
+            <span>цена (лев)</span>
+        </label>
+
+        <input type="submit" value="Добави продукт">
+    </form>
+
+</div>
+
+<%- include('footer') -%>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калъфи за телефон</title>
+
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/contact.css">
+    <link rel="stylesheet" href="/styles/addProduct.css">
+
+    <nav class="slidemenu">
+  
+        <!-- Item 1 -->
+        <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle" checked/>
+        <label for="slide-item-1"><p class="icon">🔎</p><a href="/"><span>Търсене на продукт</span></a></label>
+        
+        <!-- Item 2 -->
+        <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle"/>
+        <label for="slide-item-2"><p class="icon">➕</p><a href="/addProd"><span>Добавяне на продукт</span></a></label>
+
+        <!-- Item 3 -->
+        <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
+        <label for="slide-item-3"><p class="icon">🏠</p><a><span>За нас</span></a></label>
+        
+        <!-- Item 4 -->
+        <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle"/>
+        <label for="slide-item-4"><p class="icon">📱</p><a href="/contact"><span>Контакти</span></a></label>
+
+
+        <input type="radio" name="slideItem" id="slide-item-5" class="slide-toggle"/>
+        <label for="slide-item-5"><p class="icon">😀</p><a href="/shopingList"><span><%= locals.user ? user : "User" %></span></a>
+        <ul id="cart">
+            <% items.forEach((item)=> { %>
+                <% if(item.username == locals.user) { %>
+                    <li><%= item.id %></li>
+                <% } %>
+            <% }) %>
+        </ul></label>
+        
+        <div class="clear"></div>
+        
+        <!-- Bar -->
+        <div class="slider">
+          <div class="bar"></div>
+        </div>
+        
+      </nav>
+
+</head>
+<body>
